@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Euler_2
 {
@@ -36,7 +32,7 @@ namespace Euler_2
 				second = result;
 				result = first + second;
 
-				if(result >= 4000000)
+				if (result >= 4000000)
 					break;
 			}
 
