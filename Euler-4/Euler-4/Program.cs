@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Euler_4
 {
@@ -48,7 +46,6 @@ namespace Euler_4
 					result = i * j;
 					dictionaryOfMultiplesAndTheirResults.Add($"{i.ToString()} * {j.ToString()}", result);
 				}
-
 			}
 
 			return dictionaryOfMultiplesAndTheirResults;
