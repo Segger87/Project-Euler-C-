@@ -16,8 +16,8 @@ namespace Euler_4
 
 			foreach (var multiple in multiplesOf3.Values)
 			{
-				var isTheNumberApalindrome = GeneratePalindromes(multiple);
-				foreach (var palindrome in isTheNumberApalindrome)
+				var generatedPalindromes = GeneratePalindromes(multiple);
+				foreach (var palindrome in generatedPalindromes)
 				{
 					listOfPalindromes.Add(palindrome);
 				}
@@ -31,18 +31,15 @@ namespace Euler_4
 			Console.ReadLine();
 		}
 
-		public static Dictionary<string, int> MultiplesOfIntegers(int numbersToMultiple)
+		public static Dictionary<string, int> MultiplesOfIntegers(int numbersToMultiply)
 		{
 			int result = 0;
 			var dictionaryOfMultiplesAndTheirResults = new Dictionary<string, int>();
-			int[] arrayOfMultiplications = new int[2];
 
-			for (int i = 1; i <= numbersToMultiple; i++)
+			for (int i = 1; i <= numbersToMultiply; i++)
 			{
-				for (int j = 2; j < numbersToMultiple; j++)
+				for (int j = 2; j < numbersToMultiply; j++)
 				{
-					arrayOfMultiplications[0] = i;
-					arrayOfMultiplications[1] = j;
 					result = i * j;
 					dictionaryOfMultiplesAndTheirResults.Add($"{i.ToString()} * {j.ToString()}", result);
 				}
