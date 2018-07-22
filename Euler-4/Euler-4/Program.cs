@@ -16,7 +16,7 @@ namespace Euler_4
 
 			foreach (var multiple in multiplesOf3.Values)
 			{
-				var isTheNumberApalindrome = ReverseNumber(multiple);
+				var isTheNumberApalindrome = GeneratePalindromes(multiple);
 				foreach (var palindrome in isTheNumberApalindrome)
 				{
 					listOfPalindromes.Add(palindrome);
@@ -51,7 +51,7 @@ namespace Euler_4
 			return dictionaryOfMultiplesAndTheirResults;
 		}
 
-		public static List<int> ReverseNumber(int number)
+		public static List<int> GeneratePalindromes(int number)
 		{
 			int reverse = 0;
 			int tempNumber = number;
