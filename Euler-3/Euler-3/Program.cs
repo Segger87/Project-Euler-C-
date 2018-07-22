@@ -12,22 +12,22 @@ namespace Euler_3
 		static void Main(string[] args)
 		{
 			var primeFactors = PrimeFactors(600851475143);
-			var largestPrimeFactors = primeFactors.LastOrDefault();
+			var largestPrimeFactor = primeFactors.LastOrDefault();
 
-			Console.WriteLine($"The Largest Prime Factor of 600851475143 is {largestPrimeFactors}");
+			Console.WriteLine($"The Largest Prime Factor of 600851475143 is {largestPrimeFactor}");
 			Console.ReadLine();
 		}
 
-		public static List<int> PrimeFactors(long number)
+		public static List<int> PrimeFactors(long userSelectedNumber)
 		{
 			var listOfPrimes = new List<int>();
 
-			for (int i = 2; i <= number; i++)
+			for (int primeNumber = 2; primeNumber <= userSelectedNumber; primeNumber++)
 			{
-				while (number % i == 0)
+				while (userSelectedNumber % primeNumber == 0)
 				{
-					listOfPrimes.Add(i);
-					number = number / i;
+					listOfPrimes.Add(primeNumber);
+					userSelectedNumber = userSelectedNumber / primeNumber;
 				}
 			}
 
